@@ -1,0 +1,97 @@
+############################################################
+# +------------------------------------------------------+ #
+# |                       Remarks                        | #
+# +------------------------------------------------------+ #
+############################################################
+
+# This configuration file is for TrymOdis.
+# This config was generated for version 1.0.0.
+
+# If you wish to use special characters in this document,
+# such as accented letters, you MUST save the file as UTF-8, not ANSI.
+# If you encounter an error when loading Oracle, ensure that:
+#   - There are no tabs present: YAML only allows spaces.
+#   - Indentation is correct: YAML hierarchy is entirely based on indentation.
+#   - You have "escaped" all apostrophes in your text:
+#     If you want to write "don't", for example, write "don''t"
+#     (note the doubled apostrophe).
+#   - Text with symbols is enclosed in single or double quotation marks.
+
+# For assistance, feel free to join the Dreams Plugins community: Coming soon...
+
+#########################################################
+# +---------------------------------------------------+ #
+# |         Trym Odis Plugin (Global Settings)        | #
+# +---------------------------------------------------+ #
+#########################################################
+
+# Language Options
+# Choose the default language you wish to use.
+# Possible options: "fr", "us"
+language: "us"
+
+# The delay, in seconds, required between /home, /tp, etc.
+teleport-cooldown: 0
+
+#########################################################
+# +---------------------------------------------------+ #
+# |                      Chat                         | #
+# +---------------------------------------------------+ #
+#########################################################
+
+chat:
+
+  # Chat formatting can be done in two ways, you can either define a standard format for all chat.
+  # Or you can give a group specific chat format, to give some extra variation.
+  format: '{name}: {message}'
+
+  # Available placeholders:
+  # {message} - The content of the chat message.
+  # {name} - The sender's display name.
+  # {money} - display money of the sender
+  placeholders:
+    money: "&7J'ai &e{money}$ &8&o[money]&r"
+
+#########################################################
+# +---------------------------------------------------+ #
+# |              Welcome / Join / Leave               | #
+# +---------------------------------------------------+ #
+#########################################################
+
+# Event messages: use "none" to disable a specific message.
+# These messages are sent when a player joins, leaves, or as a general welcome.
+join-message: "§a[+] §7Welcome §e{player}&7!"                                 # Triggered when a player joins.
+leave-message: "§c[-] §e{player} §7left."                                     # Triggered when a player leaves.
+welcome-message: "§7Welcome §e{player}§7! §7{players} players online."        # General welcome message.
+
+# Developer join message (visible only to the developer)
+dev-join-message: "\n§e\u2139 §lTrym Odis Plus!\n§7Welcome back, developer! \n§8§o(( Plugin version: {version}, Theme: default ))\n§7You're in control — keep rocking the code!\n§8§o(( Support Code: {support_code} ))"
+
+# The delay, in seconds, required between /welcome.
+welcome_reward: 5 # Reward in coins for welcoming players.
+starting-balance: 0
+
+#########################################################
+# +---------------------------------------------------+ #
+# |                   Plugin Settings                 | #
+# +---------------------------------------------------+ #
+#########################################################
+
+# IMPORTANT: DO NOT CHANGE THE RESET CODE BELOW!
+# Changing this reset code will affect the plugin's functionality.
+# The reset code is used to reset the plugin's configuration to default.
+
+# The reset code is a unique identifier. Keep this code safe.
+resetCode: "{code_reset}"  # UUID for reset code, DO NOT change this!
+supportCode: "{support_code}"
+
+#########################################################
+# +---------------------------------------------------+ #
+# |             Feature Testing Configuration         | #
+# +---------------------------------------------------+ #
+#########################################################
+
+# Enable or disable the feature testing mode.
+# When enabled, experimental or in-development features will be available.
+# WARNING: This mode is for development purposes only. Use with caution.
+featureTestingMode: false

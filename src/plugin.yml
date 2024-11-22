@@ -1,0 +1,172 @@
+############################################################
+# +------------------------------------------------------+ #
+# |                   Plugin Configurations               | #
+# +------------------------------------------------------+ #
+############################################################
+
+name: TrymOdisPlugin
+main: fr.dreamplugin.top.TrymPlugin
+version: 0.1.0-dev
+author: Martin92
+api-version: 1.16
+
+############################################################
+# +------------------------------------------------------+ #
+# |                   Permissions                        | #
+# +------------------------------------------------------+ #
+############################################################
+
+permissions:
+  # Global permission for all commands and features
+  TrymPlugin.*:
+    description: "Grants access to all commands and features."
+    default: op
+
+  # Permission for specific commands
+  TrymPlugin.cosmetics.hat:
+    description: "Allows the use of the 'hat' command."
+    default: true
+
+  TrymPlugin.teleport.rtp:
+    description: "Allows the use of the 'rtp' command."
+    default: true
+
+  TrymPlugin.welcome:
+    description: "Allows sending a welcome message."
+    default: true
+
+  # Admin permissions
+  TrymPlugin.teleport.tphere:
+    description: "Allows the use of the 'tphere' command."
+    default: op
+
+  TrymPlugin.admin:
+    description: "Full access to admin commands."
+    default: op
+
+  # Trash permissions
+  TrymPlugin.trash.9:
+    description: "Access to 9-slot trash."
+    default: true
+
+  TrymPlugin.trash.18:
+    description: "Access to 18-slot trash."
+    default: false
+
+  TrymPlugin.trash.27:
+    description: "Access to 27-slot trash."
+    default: false
+
+  TrymPlugin.trash.54:
+    description: "Access to 54-slot trash."
+    default: false
+
+############################################################
+# +------------------------------------------------------+ #
+# |                   Commands                           | #
+# +------------------------------------------------------+ #
+############################################################
+
+commands:
+  # "t" command - displays the player's total playtime
+  trym:
+    description: "Admin command for managing the plugin."
+    aliases: [ "t", "trym" ]
+    permission: "TrymPlugin.admin"
+
+  # "that" command - sets the item in hand as a decorative hat
+  hat:
+    description: "Set the item in your hand as a decorative hat."
+    aliases: [ "that", "th", "thats" ]
+    permission: "TrymPlugin.cosmetics.hat"
+    usage: "/hat"
+
+  # "trp" command - random teleportation
+  rtp:
+    description: "Teleport the player to a random location."
+    aliases: [ "trtp", "go", "rtp" ]
+    permission: "TrymPlugin.teleport.rtp"
+    usage: "/go"
+
+  # "tphere" command - teleport a player to your current position
+  tphere:
+    description: "Teleport a player to your current position."
+    aliases: [ "tphere", "tph", "tpme" ]
+    permission: "TrymPlugin.teleport.tphere"
+    usage: "/tphere @Player"
+
+  # "twelcome" command - sends a welcome message to a new player
+  welcome:
+    description: "Send a welcome message to a new player."
+    aliases: [ "tw", "welcome" ]
+    permission: "TrymPlugin.welcome"
+    usage: "/welcome"
+
+  # "tpay" command - send money to another player
+  pay:
+    description: "Send money to another player."
+    aliases: [ "tpay" ]
+    permission: "TrymPlugin.economy.pay"
+    usage: "/pay @player <amount>"
+
+  # "tbalance" command - displays player balance
+  balance:
+    description: "Display your current balance."
+    aliases: [ "balance", "bal" ]
+    usage: "/balance"
+
+  # "ttrash" command - opens a trash inventory
+  trash:
+    description: "Open a trash inventory."
+    aliases: [ "tclean", "trash", "clean" ]
+    usage: "/trash"
+
+  # "teco" command - for admin use to manage the economy
+  eco:
+    description: "Admin command for managing the economy."
+    aliases: [ "teconomy", "eco", "ecoadmin" ]
+    permission: "TrymPlugin.admin"
+    usage: "/eco <give|take|set> @player <amount>"
+
+  # "teco" command - for admin use to manage the economy
+  calendar:
+    description: "calendar"
+    aliases: [ "calendar"]
+    permission: "TrymPlugin.calendar.open"
+    usage: "/calendar"
+
+  msg:
+    description: Envoyer un message privé.
+    usage: /msg <joueur> <message>
+  r:
+    description: Répondre au dernier message privé.
+    usage: /r <message>
+  ignore:
+    description: Ignorer un joueur.
+    usage: /ignore <joueur>
+  unignore:
+    description: Ne plus ignorer un joueur.
+    usage: /unignore <joueur>
+  ignorelist:
+    description: Liste des joueurs ignorés.
+    usage: /ignorelist
+  invsee:
+    description: Voir l'inventaire d'un joueur.
+    usage: /invsee <joueur>
+  craft:
+    description: Ouvrir la table de craft
+  spawn:
+    description: "Téléporte le joueur au spawn défini."
+    usage: "/spawn"
+  setspawn:
+    description: "Définit le point de spawn actuel."
+    usage: "/setspawn"
+
+############################################################
+# +------------------------------------------------------+ #
+# |            Additional Information                    | #
+# +------------------------------------------------------+ #
+############################################################
+
+# This file outlines the plugin configuration and available commands.
+# Ensure that permissions are properly configured to allow users to access the relevant commands.

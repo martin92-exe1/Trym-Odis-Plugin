@@ -1,0 +1,177 @@
+############################################################
+# +------------------------------------------------------+ #
+# |                       Remarks                        | #
+# +------------------------------------------------------+ #
+############################################################
+
+# This language file is for Trym Odis Plus, specifically in English (US).
+# If you wish to use special characters, such as accented letters,
+# you MUST save this file as UTF-8, not ANSI.
+
+# Reminder:
+#   - YAML only allows spaces, not tabs.
+#   - Ensure correct indentation: YAML hierarchy is based entirely on indentation.
+#   - Escape all apostrophes in your text by using two apostrophes (e.g., write "n''est").
+
+# This file contains all the messages and prompts in-game for TrymOdis.
+
+#########################################################
+# +---------------------------------------------------+ #
+# |               General Messages                     | #
+# +---------------------------------------------------+ #
+#########################################################
+
+onlyPlayers: "&7the command &e/{command}&7 cannot be executed in the console."
+noPermission: "&7you do not have permission to execute the command: &e{command}&7."
+notfound: "&7your language file does not have the key &e{key}&7 in &e{file}&7."
+inDev: "&7sorry, this feature is under development. For more information, join our support."
+
+#########################################################
+# +---------------------------------------------------+ #
+# |                  Cosmetics                        | #
+# +---------------------------------------------------+ #
+#########################################################
+
+cosmetics:
+  hat:
+    use: "&7you have successfully equipped your hat &e{hat}&7."
+    noItem: "&7you need to hold an item to equip it as a hat."
+    invalidItem: "&7this item cannot be used as a cosmetic."
+    title: "&7Hat equipped!"
+    subtitle: "&7you are now wearing your &e{hat}&7."
+
+#########################################################
+# +---------------------------------------------------+ #
+# |               Random Teleportation                | #
+# +---------------------------------------------------+ #
+#########################################################
+
+teleport:
+  rtp:
+    preparing: "&7you will be teleported in &e{time}&7 seconds."
+    success: "&7teleportation was successful."
+    failure: "&7no location found. Please try again later."
+  titles:
+    success_title: "&7Teleportation Successful!"
+    success_subtitle: "&7coordinates: x: &e{x}&7 y: &e{y}&7 z:&e {z}&7."
+  tphere:
+    noPlayer: "&7please specify a player."
+    invalidPlayer: "&7the player is not found or offline."
+    success: "&7player &e{player}&7 has been teleported to you."
+    teleported: "&7you have been teleported to &e{player}&7."
+  setspawn: "Spawn point set successfully!"
+  spawn:
+    notset: "The spawn point has not been set yet."
+    invalid: "The spawn point is invalid."
+    error-config: "Error in spawn data."
+    worldnotfound: "The world defined for the spawn does not exist."
+    success: "Teleported to spawn!"
+
+#########################################################
+# +---------------------------------------------------+ #
+# |                     Economy                       | #
+# +---------------------------------------------------+ #
+#########################################################
+
+economy:
+  errors:
+    player-not-found: "&7the player is not found or offline."
+    invalid-amount: "&7the amount must be a valid number."
+    amount-negative: "&7the amount must be greater than 0."
+    not-enough-money: "&7you do not have enough money."
+    unknown-command: "&7unknown command. Usage: /balance, /pay, /eco <give|take|set>."
+  commands:
+    usage:
+      balance: "&7usage: /balance"
+      pay: "&7usage: /pay <player> <amount>"
+      eco: "&7usage: /eco <give|take|set> <player> <amount>"
+    balance:
+      otherCheck: "&e{player}&7 has &e{balance}$&7 in his account."
+      check: "&7you have &e{balance}$&7 in your account."
+    pay:
+      cannot-pay-self: "&7you cannot pay yourself."
+      money-sent: "&7you have sent &e{amount}$&7 to {receiver}."
+      money-received: "&7you have received &e{amount}$&7 from &e{sender}&7."
+    eco:
+      money-given: "&7you have given &e{amount}$&7 to &e{player}&7."
+      player-money-added: "&7you have received &e{amount}$&7."
+      player-money-taken: "&7you have lost &e{amount}$&7."
+      money-taken: "&7you have removed &e{amount}$&7 from &e{player}&7."
+      player-money-removed: "&7you have lost &e{amount}$&7."
+      money-set: "&7the balance of &e{player}&7 has been set to &e{amount}$&7."
+      player-money-set: "&7your balance has been set to &e{amount}$&7."
+
+#########################################################
+# +---------------------------------------------------+ #
+# |                      Welcome                      | #
+# +---------------------------------------------------+ #
+#########################################################
+
+welcome:
+  message: "&e{player}&7 welcomed &e{news}&7!"
+  rewards: "&7you have earned &e5$&7 for welcoming &e{news}&7."
+  empty: "&7no new player to welcome, or you've already welcomed them!"
+  title: "&7Hello, &e{player}&7!"
+  subtitle: "none" # none to disable
+
+#########################################################
+# +---------------------------------------------------+ #
+# |          Trash Bin / Backpack / Crafting Table    | #
+# +---------------------------------------------------+ #
+#########################################################
+
+trash:
+  open: "&7trash bin opened with &e{size}&7 slots."
+craft:
+  open: "&7crafting table opened!"
+
+#########################################################
+# +---------------------------------------------------+ #
+# |                  Private Messages                 | #
+# +---------------------------------------------------+ #
+#########################################################
+
+mp:
+  ignore:
+    blocked: "&7this player is ignoring you."
+    add: "&7you are now ignoring &e{player}&7."
+    remove: "&7you are no longer ignoring &e{player}&7."
+    not_ignore: "&7this player is not on your ignore list."
+    head: "&7ignored players:"
+    format: " &7- {player}"
+  notFound: "&7player not found."
+  notFoundReply: "&7no player to reply to."
+  format:
+    sent: "&7[&evous&7 -> {player}] &7{message}"
+    receiver: "&7[{player} -> &evous&7] &7{message}"
+
+#########################################################
+# +---------------------------------------------------+ #
+# |                        Staff                      | #
+# +---------------------------------------------------+ #
+#########################################################
+
+staff:
+  errors:
+    player-not-found: "&7the player is not found or offline."
+
+#########################################################
+# +---------------------------------------------------+ #
+# |               Trym Odis System                    | #
+# +---------------------------------------------------+ #
+#########################################################
+
+messages:
+  support_message: "&7Need help? We're here for you!\nContact our support team on Discord with your support code:\n&e{support_code}&7, for immediate assistance.\nFeel free to contact us if you have &edes questions or encounter issues&7."
+  help_message:
+    reset: "&7reset the configuration with a confirmation code."
+    reload: "&7reload the configuration and language files."
+    version: "&7show the current plugin version."
+    support: "&7show the Discord link and support code for plugin version information."
+  reload_success: "&7configuration successfully reloaded! version &e{version}&7."
+  version_message: "&7current version: &e{version}&7 of &eTrym Odis Plus&7."
+  reload_failed: "&7configuration was not reloaded!"
+  reset:
+    reset_success: "&7configuration successfully reset."
+    invalid_code: "&7invalid confirmation code."
+    config_reset: "&7configuration reset and reloaded."

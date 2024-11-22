@@ -1,0 +1,177 @@
+############################################################
+# +------------------------------------------------------+ #
+# |                       Remarques                      | #
+# +------------------------------------------------------+ #
+############################################################
+
+# Ce fichier de langue est pour Trym Odis Plus, spécifiquement en français (FR).
+# si vous souhaitez utiliser des caractères spéciaux, tels que les lettres accentuées,
+# vous DEVEZ enregistrer ce fichier en UTF-8, et non en ANsI.
+
+# Rappel :
+#   - YAML n'autorise que les espaces, pas les tabulations.
+#   - Assurez-vous de l'indentation correcte : la hiérarchie YAML est entièrement basée sur l'indentation.
+#   - Échappez tous les apostrophes dans votre texte en utilisant deux apostrophes (par ex., écrivez "n''est").
+
+# Ce fichier contient tous les messages et invites en jeu pour TrymOdis.
+
+#########################################################
+# +---------------------------------------------------+ #
+# |               Messages Généraux                   | #
+# +---------------------------------------------------+ #
+#########################################################
+
+onlyPlayers: "&7la commande &e/{command}&7 ne peut pas etre executee dans la console."
+noPermission: "&7vous n'avez pas la permission pour executer la commande : &e{command}&7."
+notfound: "&7votre fichier lang n'a pas la cle &e{key}&7 dans &e{file}&7."
+inDev: "&7desole cette fonctionnalite est en developpement. pour plus d'information, rejoignez notre support."
+
+#########################################################
+# +---------------------------------------------------+ #
+# |                  Cosmétiques                      | #
+# +---------------------------------------------------+ #
+#########################################################
+
+cosmetics:
+  hat:
+    use: "&7vous avez equipe votre chapeau &e{hat}&7 avec succes."
+    noItem: "&7vous devez tenir un objet pour l’equiper en tant que chapeau."
+    invalidItem: "&7l'objet ne peut pas être utilise comme cosmetique."
+    title: "&7chapeau equipe !"
+    subtitle: "&7vous portez votre &e{hat}&7."
+
+#########################################################
+# +---------------------------------------------------+ #
+# |               Téléportation Aléatoire             | #
+# +---------------------------------------------------+ #
+#########################################################
+
+teleport:
+  rtp:
+    preparing: "&7vous serez teleporte dans &e{time}&7 secondes."
+    success: "&7teleportation effectuee avec succes."
+    failure: "&7aucun emplacement sur trouve. essayez plus tard."
+  titles:
+    success_title: "&7teleportation reussie !"
+    success_subtitle: "&7coordonnées : x: &e{x}&7 y: &e{y}&7 z:&e {z}&7."
+  tphere:
+    noPlayer: "&7veuillez specifier un joueur."
+    invalidPlayer: "&7le joueur est introuvable ou hors ligne."
+    success: "&7le joueur &e{player}&7 a ete teleporte vers &evous&7."
+    teleported: "&7vous avez ete teleporte vers &e{player}&7."
+  setspawn: "Point de spawn défini avec succès !"
+  spawn:
+    notset: "Le point de spawn n'a pas encore été défini."
+    invalid: "Le point de spawn est invalide."
+    error-config: "Erreur dans les données de spawn"
+    worldnotfound: "Le monde défini pour le spawn n'existe pas."
+    success: "Téléporté au spawn !"
+
+#########################################################
+# +---------------------------------------------------+ #
+# |                     Economy                       | #
+# +---------------------------------------------------+ #
+#########################################################
+
+economy:
+  errors:
+    player-not-found: "&7le joueur est introuvable ou hors ligne."
+    invalid-amount: "&7le montant doit etre un nombre valide."
+    amount-negative: "&7le montant doit etre superieur a 0."
+    not-enough-money: "&7vous n'avez pas assez d'argent."
+    unknown-command: "&7commande inconnue. utilisation : /balance, /pay, /eco <give|take|set>."
+  commands:
+    usage:
+      balance: "&7utilisation : /balance"
+      pay: "&7utilisation : /pay <joueur> <montant>"
+      eco: "&7utilisation : /eco <give|take|set> <joueur> <montant>"
+    balance:
+      check: "&7vous avez &e{balance}$&7 dans votre compte."
+      otherCheck: "&e{player}&7 a &b{balance}$&f dans son compte."
+    pay:
+      cannot-pay-self: "&7vous ne pouvez pas vous payer vous-meme."
+      money-sent: "&7vous avez envoye &e{amount}$&7 a {receiver}."
+      money-received: "&7vous avez recu &e{amount}$&7 de &e{sender}&7."
+    eco:
+      money-given: "&7vous avez ajoute &e{amount}$&7 a &e{player}&7."
+      player-money-added: "&7vous avez recu &e{amount}$&7."
+      player-money-taken: "&7vous avez perdu &e{amount}$&7."
+      money-taken: "&7vous avez retire &e{amount}$&7 de &e{player}&7."
+      player-money-removed: "&7vous avez perdu &e{amount}$&7."
+      money-set: "&7le solde de &e{player}&7 a ete defini a &e{amount}$&7."
+      player-money-set: "&7votre solde a ete defini a &e{amount}$&7."
+
+#########################################################
+# +---------------------------------------------------+ #
+# |                      Bienvenue                    | #
+# +---------------------------------------------------+ #
+#########################################################
+
+welcome:
+  message: "&e{player}&7 a souhaite la bienvenue a &e{news}&7 !"
+  rewards : "&7tu as gagne &e5$&7 pour avoir souhaite la bienvenue a &e{news}&7."
+  empty: "&7aucun nouveau joueur a accueillir ou vous l'avez deja accueilli !"
+  title: "&7Salut, &e{player}&7!"
+  subtitle: "none" # none for disable
+
+#########################################################
+# +---------------------------------------------------+ #
+# |       Poubelle / Sac à dos / Table de craft       | #
+# +---------------------------------------------------+ #
+#########################################################
+
+trash:
+  open: "&7corbeille ouverte avec &e{size}&7 emplacements."
+craft:
+  open: "&7table de craft ouverte !"
+
+#########################################################
+# +---------------------------------------------------+ #
+# |                  Message Priver                   | #
+# +---------------------------------------------------+ #
+#########################################################
+
+mp:
+  ignore:
+    blocked: "&7ce joueur vous ignore"
+    add: "&7vous ignorez maintenant &e{player}&7."
+    remove: "&7vous n'ignorez plus &e{player}&7."
+    not_ignore: "&7ce joueur n'est pas dans votre liste d'ignores."
+    head: "&7joueurs ignores:"
+    format: " &7- {player}"
+  notFound: "&7joueur introuvable."
+  notFoundReply: "&7aucun joueur a qui repondre."
+  format:
+    sent: "&7[&evous&7 -> {player}] &7{message}"
+    receiver: "&7[{player} -> &evous&7] &7{message}"
+
+#########################################################
+# +---------------------------------------------------+ #
+# |                        Staff                      | #
+# +---------------------------------------------------+ #
+#########################################################
+
+staff:
+  errors:
+    player-not-found: "&7le joueur est introuvable ou hors ligne."
+
+#########################################################
+# +---------------------------------------------------+ #
+# |               système Trym Odis                   | #
+# +---------------------------------------------------+ #
+#########################################################
+
+messages:
+  support_message: "&7besoin d’aide ? nous sommes la pour vous!\ncontactez notre equipe de support sur le discord incluant votre code de support:\n&e{support_code}&7, pour une assistance immédiate.\nn’hesitez pas a nous contacter si vous avez &edes questions ou rencontrez des problemes&7."
+  help_message:
+    reset: "&7reinitialise la configuration avec un code de confirmation.."
+    reload: "&7recharge la configuration et les fichiers de langue."
+    version: "&7affiche la version actuelle du plugin."
+    support: "&7affiche le lien discord et le code de support pour les informations sur la version du plugin."
+  reload_success: "&7configuration rechargee avec succes ! version &e{version}&7."
+  version_message: "&7version actuelle : &e{version}&7 de &eTrym Odis Plus&7."
+  reload_failed: "&7configuration n'a pas ete rechargee !"
+  reset:
+    reset_success: "&7configuration reinitialisee avec succes."
+    invalid_code: "&7code de confirmation incorrect."
+    config_reset: "&7configuration reinitialisee et rechargee."
